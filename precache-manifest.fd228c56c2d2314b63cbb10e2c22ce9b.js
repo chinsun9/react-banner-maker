@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b2a225468995413db068c88d27ccb21a",
+    "revision": "4b8cd7cd7d43a587bd1ebb3d346a3b09",
     "url": "/react-banner-maker/index.html"
   },
   {
