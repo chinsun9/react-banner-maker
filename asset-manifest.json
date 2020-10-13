@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/chinsun9.github.io//react-banner-maker/static/css/main.6ff34c11.chunk.css",
+    "main.js": "/chinsun9.github.io//react-banner-maker/static/js/main.8b34572e.chunk.js",
+    "main.js.map": "/chinsun9.github.io//react-banner-maker/static/js/main.8b34572e.chunk.js.map",
+    "runtime-main.js": "/chinsun9.github.io//react-banner-maker/static/js/runtime-main.0755abd6.js",
+    "runtime-main.js.map": "/chinsun9.github.io//react-banner-maker/static/js/runtime-main.0755abd6.js.map",
+    "static/js/2.f74350fc.chunk.js": "/chinsun9.github.io//react-banner-maker/static/js/2.f74350fc.chunk.js",
+    "static/js/2.f74350fc.chunk.js.map": "/chinsun9.github.io//react-banner-maker/static/js/2.f74350fc.chunk.js.map",
+    "index.html": "/chinsun9.github.io//react-banner-maker/index.html",
+    "precache-manifest.59d2a09619954c992bef015e134d55cd.js": "/chinsun9.github.io//react-banner-maker/precache-manifest.59d2a09619954c992bef015e134d55cd.js",
+    "service-worker.js": "/chinsun9.github.io//react-banner-maker/service-worker.js",
+    "static/css/main.6ff34c11.chunk.css.map": "/chinsun9.github.io//react-banner-maker/static/css/main.6ff34c11.chunk.css.map",
+    "static/js/2.f74350fc.chunk.js.LICENSE.txt": "/chinsun9.github.io//react-banner-maker/static/js/2.f74350fc.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0755abd6.js",
+    "static/js/2.f74350fc.chunk.js",
+    "static/css/main.6ff34c11.chunk.css",
+    "static/js/main.8b34572e.chunk.js"
+  ]
+}
