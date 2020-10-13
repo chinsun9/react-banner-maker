@@ -1,0 +1,9 @@
+.HistoryList {
+  border-radius: 5px;
+  position: relative;
+  outline: none;
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+  max-width: 400px;
+  padding: 15px;
+}

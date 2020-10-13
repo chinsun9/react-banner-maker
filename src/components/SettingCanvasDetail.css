@@ -1,0 +1,30 @@
+#inputGroupSelect01 {
+  max-width: 70px;
+}
+
+#backgroundColorPicker > input,
+#fontColorPicker > input {
+  max-width: 90px;
+  min-width: 90px;
+}
+
+#backgroundColorPicker > div.input-group-append > span,
+#fontColorPicker > div.input-group-append > span {
+  padding: 0px;
+}
+
+#backgroundColorPicker > div.input-group-append > span > div,
+#fontColorPicker > div.input-group-append > span > div {
+  height: 100%;
+  width: 100%;
+}
+
+#backgroundColorPicker > div.input-group-append > span > div > div,
+#fontColorPicker > div.input-group-append > span > div > div {
+  height: 100%;
+}
+
+.SettingCanvasDetail .input-group {
+  width: auto;
+  margin: 1em;
+}

@@ -1,0 +1,73 @@
+html {
+  font-size: 14px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  min-width: 300px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  text-rendering: optimizeLegibility;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+div {
+  text-align: center;
+
+  place-content: center;
+}
+
+#textfield {
+  text-align: center;
+}
+
+body > div > div:nth-child(2) > div:nth-child(1) > input,
+body > div > div:nth-child(2) > div:nth-child(2) > input {
+  max-width: 150px;
+}
+
+body > div > div:nth-child(2) > div {
+  width: auto;
+}
+
+.sidetab {
+  color: rgba(0, 0, 0, 0.452);
+  font-size: 34px;
+  left: 0;
+  width: 50px;
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(247, 247, 247);
+  height: 100%;
+}
+/* a tag no color */
+a {
+  color: inherit;
+}
+
+@media (max-width: 736px) {
+  .sidetab {
+    display: none;
+  }
+}
+
+/* 카피, 다운로드 버튼 마진*/
+body > div.container.p-5 > div:nth-child(7) input {
+  margin: 15px;
+}

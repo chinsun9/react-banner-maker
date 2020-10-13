@@ -1,0 +1,14 @@
+.SettingCanvasSize input {
+  max-width: 150px;
+}
+
+.SettingCanvasSize .input-group {
+  width: auto;
+}
+
+/* input number remove arrows */
+.SettingCanvasDetail input::-webkit-outer-spin-button,
+.SettingCanvasDetail input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

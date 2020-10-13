@@ -1,0 +1,10 @@
+.HistoryItem {
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+  margin: 1px;
+  padding: 0px;
+}
