@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
 import history from './history';
-import canvas from './canvas'
+import canvas from './canvas';
 
 const rootReducer = combineReducers({
   history,
-  canvas
+  canvas,
 });
 
 export default rootReducer;

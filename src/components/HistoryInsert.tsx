@@ -4,7 +4,7 @@ import useAddHistory from '../hooks/useAddHistory';
 function HistoryInsert() {
   const [value, setValue] = useState('');
   const addHistory = useAddHistory();
-  
+
   const onChange = (e: ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
   };
@@ -16,11 +16,7 @@ function HistoryInsert() {
 
   return (
     <form onSubmit={onSubmit}>
-      <input
-        placeholder="할 일을 입력하세요."
-        value={value}
-        onChange={onChange}
-      />
+      <input placeholder="할 일을 입력하세요." value={value} onChange={onChange} />
       <button type="submit">등록</button>
     </form>
   );

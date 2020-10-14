@@ -2,111 +2,133 @@ import React, { CSSProperties, useState } from 'react';
 import { ColorResult, SketchPicker } from 'react-color';
 import useCanvas from '../hooks/useCanvas';
 import useCanvasActions from '../hooks/useCanvasActions';
-import reactCSS from 'reactcss'
+import reactCSS from 'reactcss';
 
-import './SettingCanvasDetail.css'
+import './SettingCanvasDetail.css';
 import { getColorByBgColor, randomColorGenerator } from '../modules/common/utils';
 
 function SettingCanvasSize() {
-
   const { font_size, font_color, background_color } = useCanvas();
-  
-  
-  const {randomCanvasColor,onChangeCanvasFontSize,onChangeCanvasFontColor,onChangeCanvasBackgroundColor  } = useCanvasActions();
+
+  const {
+    randomCanvasColor,
+    onChangeCanvasFontSize,
+    onChangeCanvasFontColor,
+    onChangeCanvasBackgroundColor,
+  } = useCanvasActions();
 
   // const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
   //   e.preventDefault()
-    
+
   //   const {name, value} = e.target
   //   onChangeCanvasSize({name:name,value: Number(value)})
   // }
 
-  const randomBannerColor = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) =>{
-    e.preventDefault()
+  const randomBannerColor = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    e.preventDefault();
 
-    const background_color = randomColorGenerator()
-    const font_color = getColorByBgColor(background_color)
+    const background_color = randomColorGenerator();
+    const font_color = getColorByBgColor(background_color);
 
-    setFontColorPickerState({  ...fontColorPickerState, color: font_color })
-    setBackgroundColorPickerState({  ...backgroundColorPickerState, color:background_color})
-    randomCanvasColor({background_color:background_color,font_color:font_color})
-  }
+    setFontColorPickerState({ ...fontColorPickerState, color: font_color });
+    setBackgroundColorPickerState({
+      ...backgroundColorPickerState,
+      color: background_color,
+    });
+    randomCanvasColor({
+      background_color: background_color,
+      font_color: font_color,
+    });
+  };
 
-  const onChangeFontSize = (e: React.ChangeEvent<HTMLInputElement>)=>{
-    e.preventDefault()
+  const onChangeFontSize = (e: React.ChangeEvent<HTMLInputElement>) => {
+    e.preventDefault();
 
-    onChangeCanvasFontSize(Number( e.target.value))
-  }
-  
-  const onChangeFontColor = (e: React.ChangeEvent<HTMLInputElement>)=>{
-    e.preventDefault()
+    onChangeCanvasFontSize(Number(e.target.value));
+  };
 
-    setFontColorPickerState({  ...fontColorPickerState, color: e.target.value })
-    onChangeCanvasFontColor(e.target.value)
-  }
-  
-  
-  const onChangeBackgroundColor = (e: React.ChangeEvent<HTMLInputElement>)=>{
-    e.preventDefault()
+  const onChangeFontColor = (e: React.ChangeEvent<HTMLInputElement>) => {
+    e.preventDefault();
 
-    setBackgroundColorPickerState({  ...backgroundColorPickerState, color: e.target.value })
-    onChangeCanvasBackgroundColor(e.target.value)
-  }
+    setFontColorPickerState({ ...fontColorPickerState, color: e.target.value });
+    onChangeCanvasFontColor(e.target.value);
+  };
 
+  const onChangeBackgroundColor = (e: React.ChangeEvent<HTMLInputElement>) => {
+    e.preventDefault();
 
+    setBackgroundColorPickerState({
+      ...backgroundColorPickerState,
+      color: e.target.value,
+    });
+    onChangeCanvasBackgroundColor(e.target.value);
+  };
 
   // color test
 
   type MyState = {
-    displayColorPicker: boolean
-    color: string
-  }
+    displayColorPicker: boolean;
+    color: string;
+  };
 
   const initialBackgroundColorPickerState: MyState = {
     displayColorPicker: false,
-    color: background_color
+    color: background_color,
   };
 
   const initialFontColorPickerState: MyState = {
     displayColorPicker: false,
-    color: font_color
+    color: font_color,
   };
 
-  const [backgroundColorPickerState, setBackgroundColorPickerState] = useState(initialBackgroundColorPickerState)
-  const [fontColorPickerState, setFontColorPickerState] = useState(initialFontColorPickerState)
- 
+  const [backgroundColorPickerState, setBackgroundColorPickerState] = useState(initialBackgroundColorPickerState);
+  const [fontColorPickerState, setFontColorPickerState] = useState(initialFontColorPickerState);
 
   // font
   const handleClickFontColor = () => {
-    setFontColorPickerState({ ...fontColorPickerState, displayColorPicker: !fontColorPickerState.displayColorPicker })
+    setFontColorPickerState({
+      ...fontColorPickerState,
+      displayColorPicker: !fontColorPickerState.displayColorPicker,
+    });
   };
 
   const handleCloseFontColor = () => {
-    setFontColorPickerState({  ...fontColorPickerState,displayColorPicker: false })
+    setFontColorPickerState({
+      ...fontColorPickerState,
+      displayColorPicker: false,
+    });
   };
 
   const handleChangeFontColor = (color: ColorResult) => {
-    setFontColorPickerState({  ...fontColorPickerState, color: color.hex })
-    onChangeCanvasFontColor(fontColorPickerState.color)
+    setFontColorPickerState({ ...fontColorPickerState, color: color.hex });
+    onChangeCanvasFontColor(fontColorPickerState.color);
   };
 
-  
   // background
   const handleClickBackgroundColor = () => {
-    setBackgroundColorPickerState({ ...backgroundColorPickerState, displayColorPicker: !backgroundColorPickerState.displayColorPicker })
+    setBackgroundColorPickerState({
+      ...backgroundColorPickerState,
+      displayColorPicker: !backgroundColorPickerState.displayColorPicker,
+    });
   };
 
   const handleCloseBackgroundColor = () => {
-    setBackgroundColorPickerState({  ...backgroundColorPickerState,displayColorPicker: false })
+    setBackgroundColorPickerState({
+      ...backgroundColorPickerState,
+      displayColorPicker: false,
+    });
   };
 
   const handleChangeBackgroundColor = (color: ColorResult) => {
-    setBackgroundColorPickerState({  ...backgroundColorPickerState, color: color.hex })
-    onChangeCanvasBackgroundColor(backgroundColorPickerState.color)
+    setBackgroundColorPickerState({
+      ...backgroundColorPickerState,
+      color: color.hex,
+    });
+    onChangeCanvasBackgroundColor(backgroundColorPickerState.color);
   };
 
   const styles = reactCSS({
-    'default': {
+    default: {
       colorBackgroundColor: {
         width: '36px',
         height: '100%',
@@ -129,8 +151,8 @@ function SettingCanvasSize() {
       },
       popover: {
         position: 'absolute',
-        zIndex: 3 ,
-      }  as CSSProperties,
+        zIndex: 3,
+      } as CSSProperties,
       cover: {
         position: 'fixed',
         top: '0px',
@@ -142,17 +164,15 @@ function SettingCanvasSize() {
   });
 
   // color test
-  
 
   return (
-      <>
+    <>
       <div className="SettingCanvasDetail row mb-2">
         <div className="input-group mb-3 ">
           <div className="input-group-prepend">
-            <label
-              className="input-group-text font-weight-bold"
-              htmlFor="inputGroupSelect01"
-              >Font Size</label>
+            <label className="input-group-text font-weight-bold" htmlFor="inputGroupSelect01">
+              Font Size
+            </label>
           </div>
 
           <input
@@ -175,65 +195,67 @@ function SettingCanvasSize() {
 
         <div id="fontColorPicker" className="input-group mb-3">
           <div className="input-group-prepend">
-            <span className="input-group-text font-weight-bold" id="basic-addon1"
-              >Font</span>
+            <span className="input-group-text font-weight-bold" id="basic-addon1">
+              Font
+            </span>
           </div>
 
-          <input type="text" className="form-control input-lg" 
-          value={fontColorPickerState.color}
-          onChange={onChangeFontColor}  />
+          <input
+            type="text"
+            className="form-control input-lg"
+            value={fontColorPickerState.color}
+            onChange={onChangeFontColor}
+          />
 
           <div className="input-group-append">
-            <span className="input-group-text colorpicker-input-addon"><div>
-              <div style={ styles.swatch } onClick={ handleClickFontColor }>
-                <div style={ styles.colorFontColor } />
+            <span className="input-group-text colorpicker-input-addon">
+              <div>
+                <div style={styles.swatch} onClick={handleClickFontColor}>
+                  <div style={styles.colorFontColor} />
+                </div>
+                {fontColorPickerState.displayColorPicker ? (
+                  <div style={styles.popover}>
+                    <div style={styles.cover} onClick={handleCloseFontColor} />
+                    <SketchPicker color={fontColorPickerState.color} onChange={handleChangeFontColor} />
+                  </div>
+                ) : null}
               </div>
-              { fontColorPickerState.displayColorPicker ? <div style={ styles.popover }>
-                <div style={ styles.cover } onClick={ handleCloseFontColor }/>
-                <SketchPicker color={ fontColorPickerState.color } onChange={ handleChangeFontColor } />
-              </div> : null }
-
-            </div></span>
+            </span>
           </div>
         </div>
 
-        <div
-          id="backgroundColorPicker"
-          className="input-group mb-3"
-        >
+        <div id="backgroundColorPicker" className="input-group mb-3">
           <div className="input-group-prepend">
-            <span className="input-group-text font-weight-bold" id="basic-addon1"
-              >Back</span
-            >
+            <span className="input-group-text font-weight-bold" id="basic-addon1">
+              Back
+            </span>
           </div>
 
-          <input type="text" className="form-control input-lg" 
-          value={backgroundColorPickerState.color}
-          onChange={onChangeBackgroundColor}
+          <input
+            type="text"
+            className="form-control input-lg"
+            value={backgroundColorPickerState.color}
+            onChange={onChangeBackgroundColor}
           />
 
-
           <div className="input-group-append">
-            <span className="input-group-text colorpicker-input-addon"
-              ><div>
-              <div style={ styles.swatch } onClick={ handleClickBackgroundColor }>
-                <div style={ styles.colorBackgroundColor } />
+            <span className="input-group-text colorpicker-input-addon">
+              <div>
+                <div style={styles.swatch} onClick={handleClickBackgroundColor}>
+                  <div style={styles.colorBackgroundColor} />
+                </div>
+                {backgroundColorPickerState.displayColorPicker ? (
+                  <div style={styles.popover}>
+                    <div style={styles.cover} onClick={handleCloseBackgroundColor} />
+                    <SketchPicker color={backgroundColorPickerState.color} onChange={handleChangeBackgroundColor} />
+                  </div>
+                ) : null}
               </div>
-              { backgroundColorPickerState.displayColorPicker ? <div style={ styles.popover }>
-                <div style={ styles.cover } onClick={ handleCloseBackgroundColor }/>
-                <SketchPicker color={ backgroundColorPickerState.color } onChange={ handleChangeBackgroundColor } />
-              </div> : null }
-
-            </div></span>
+            </span>
           </div>
 
           <div className="input-group-append">
-            <button
-              type="button"
-              className="btn btn-secondary"
-              onClick={randomBannerColor}
-              value="Random"
-            >
+            <button type="button" className="btn btn-secondary" onClick={randomBannerColor} value="Random">
               Random
             </button>
           </div>

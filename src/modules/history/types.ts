@@ -4,11 +4,9 @@ import * as actions from './actions';
 
 export type HistoryAction = ActionType<typeof actions>;
 
-
-
 export type History = {
   id: number;
-  value: Canvas
+  value: Canvas;
 };
 
 export type HistoryState = History[];

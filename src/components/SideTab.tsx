@@ -4,10 +4,7 @@ export default function SideTab() {
   return (
     <div className="sidetab">
       <div className="sideItem">
-        <a
-          href="https://github.com/chinsun9/react-banner-maker"
-          target="chinsun9 github"
-        >
+        <a href="https://github.com/chinsun9/react-banner-maker" target="chinsun9 github">
           <svg
             viewBox="64 64 896 896"
             focusable="false"

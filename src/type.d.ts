@@ -1,11 +1,9 @@
 type InputValue = {
-	name: string;
-	value: number;
+  name: string;
+  value: number;
 };
 
 type Colors = {
-	font_color: string;
-	background_color: string;
+  font_color: string;
+  background_color: string;
 };
-
-

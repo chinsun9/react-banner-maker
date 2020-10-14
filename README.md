@@ -22,6 +22,13 @@
 
 <hr><hr><hr>
 
+## create-react-app으로 프로젝트 생성
+
+```
+npx create-react-app . --typescript
+yarn add redux react-redux @types/react-redux
+```
+
 ## yarn add typesafe-actions
 
 ```cmd cmd
