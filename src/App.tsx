@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import Header from './components/Header';
-// import HistoryInsert from './components/HistoryInsert';
 import HistoryList from './components/HistoryList';
 import SettingCanvasSize from './components/SettingCanvasSize';
 import SideTab from './components/SideTab';
@@ -22,7 +21,6 @@ function App() {
 
         <ExportButtons></ExportButtons>
 
-        {/* <HistoryInsert /> */}
         <HistoryList />
       </div>
       <SideTab></SideTab>
