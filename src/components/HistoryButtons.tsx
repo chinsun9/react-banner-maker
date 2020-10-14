@@ -1,23 +1,16 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import useHistory from '../hooks/useHistory';
 import useSetHistory from '../hooks/useSetHistory';
 import './HistoryButtons.css';
-
-const initialState: InputFile = {
-  selectedFile: null,
-};
 
 type InputFile = {
   selectedFile: File | null;
 };
 
 export default function HistoryButtons() {
-  // const { } = useHistoryActions()
-
   const setHistory = useSetHistory();
   const history = useHistory();
 
-  // const [fileState, setFileState] = useState(initialState);
   const inputRef = useRef<HTMLInputElement>(null);
 
   const onImport = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
