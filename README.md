@@ -1,5 +1,27 @@
 # react-banner-maker
 
+- [Banner Maker](https://banner.godori.dev/)을 보고 만들어 보았습니다.
+- html로만 만든 [html-banner-maker](https://github.com/chinsun9/html-banner-maker)를 리액트를 사용해서 다시 만들어 보았습니다.
+
+## [데모](https://chinsun9.github.io/react-banner-maker/)
+
+[![데모](readmeRes/preview.jpg)](https://chinsun9.github.io/react-banner-maker/)
+
+## 기능
+
+- 캔버스 크기 조절
+- 실시간 캔버스 업데이트
+- 폰트 사이즈 조절
+- 폰트색 조절
+- 캔버스색에 따른 폰트색 자동조절
+- 캔버스색 조절
+- 랜덤 캠버스색
+- 이미지로 다운로드
+- 클립보드로 카피
+- 컬러 히스토리 기능
+
+<hr><hr><hr>
+
 ## yarn add typesafe-actions
 
 ```cmd cmd
