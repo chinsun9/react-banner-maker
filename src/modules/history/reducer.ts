@@ -16,8 +16,6 @@ const history = createReducer<HistoryState, HistoryAction>(initialState, {
       value: canvasValue,
     }),
   [SET_HISTORY]: (state, { payload: list }) => {
-    console.log(`list`, list);
-
     state = list;
 
     return state;

@@ -1,11 +1,8 @@
 import React, { useRef } from 'react';
 import useHistory from '../hooks/useHistory';
 import useSetHistory from '../hooks/useSetHistory';
+import { History } from '../modules/history';
 import './HistoryButtons.css';
-
-type InputFile = {
-  selectedFile: File | null;
-};
 
 export default function HistoryButtons() {
   const setHistory = useSetHistory();
@@ -43,7 +40,6 @@ export default function HistoryButtons() {
   const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
     if (!e.target.files) return;
-    console.log('ok', e.target.files[0].name);
 
     const reader = new FileReader();
     reader.onload = onReaderLoad;
@@ -53,7 +49,18 @@ export default function HistoryButtons() {
   };
 
   const onReaderLoad = (event: any) => {
-    const obj = JSON.parse(event.target.result);
+    const obj = JSON.parse(event.target.result) as [];
+
+    // json파일이 적절한지 검사..
+    try {
+      obj.forEach((i: History) => {
+        console.info(i.id, i.value.background_color, i.value.font_color);
+      });
+    } catch (error) {
+      console.error('적절한 형식이 아닙니다.');
+      alert('적절한 형식이 아닙니다.');
+      return;
+    }
 
     setHistory(obj);
   };
