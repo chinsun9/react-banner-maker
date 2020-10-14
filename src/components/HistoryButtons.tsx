@@ -20,7 +20,8 @@ export default function HistoryButtons() {
     inputRef.current.click();
   };
 
-  const onExport = () => {
+  const onExport = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    e.preventDefault();
     if (history.length === 0) {
       console.info('히스토리가 비어있음');
       return;
@@ -49,7 +50,7 @@ export default function HistoryButtons() {
   };
 
   const onReaderLoad = (event: any) => {
-    const obj = JSON.parse(event.target.result) as [];
+    const obj = JSON.parse(event.target.result) as History[];
 
     // json파일이 적절한지 검사..
     try {
