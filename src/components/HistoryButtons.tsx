@@ -45,7 +45,7 @@ export default function HistoryButtons() {
     if (!e.target.files) return;
     console.log('ok', e.target.files[0].name);
 
-    var reader = new FileReader();
+    const reader = new FileReader();
     reader.onload = onReaderLoad;
     reader.readAsText(e.target.files[0]);
 
@@ -53,7 +53,8 @@ export default function HistoryButtons() {
   };
 
   const onReaderLoad = (event: any) => {
-    var obj = JSON.parse(event.target.result);
+    const obj = JSON.parse(event.target.result);
+
     setHistory(obj);
   };
 

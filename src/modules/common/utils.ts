@@ -1,5 +1,5 @@
 export function randomColorGenerator() {
-  var bg_colour = Math.floor(Math.random() * 16777215).toString(16);
+  let bg_colour = Math.floor(Math.random() * 16777215).toString(16);
   bg_colour = '#' + ('000000' + bg_colour).slice(-6);
   return bg_colour;
 }
@@ -12,7 +12,7 @@ export function getColorByBgColor(bgColor: string) {
 }
 
 export function saveAs(uri: string, filename: string) {
-  var link = document.createElement('a');
+  const link = document.createElement('a');
   if (typeof link.download === 'string') {
     link.href = uri;
     link.download = filename;
