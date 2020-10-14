@@ -8,6 +8,7 @@ import Canvas from './components/Canvas';
 import Textfield from './components/Textfield';
 import SettingCanvasDetail from './components/SettingCanvasDetail';
 import ExportButtons from './components/ExportButtons';
+import HistoryButtons from './components/HistoryButtons';
 
 function App() {
   return (

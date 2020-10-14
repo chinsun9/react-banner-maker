@@ -1,5 +1,5 @@
 import { createReducer } from 'typesafe-actions';
-import { ADD_HISTORY, REMOVE_HISTORY } from './actions';
+import { ADD_HISTORY, SET_HISTORY, REMOVE_HISTORY } from './actions';
 import { HistoryAction, HistoryState } from './types';
 
 // 초깃값 설정
@@ -15,6 +15,14 @@ const history = createReducer<HistoryState, HistoryAction>(initialState, {
       id: Math.max(0, ...state.map((historyItem) => historyItem.id)) + 1,
       value: canvasValue,
     }),
+  [SET_HISTORY]: (state, { payload: list }) => {
+    console.log(`list`, list);
+
+    state = list;
+
+    return state;
+  },
+
   [REMOVE_HISTORY]: (state, { payload: id }) => state.filter((historyItem) => historyItem.id !== id),
 });
 

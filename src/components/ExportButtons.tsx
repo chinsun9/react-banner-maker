@@ -42,7 +42,7 @@ export default function ExportButtons() {
       </button>
 
       <button type="button" className="btn btn-primary" onClick={saveBanner}>
-        <i className="fas fa-download"></i>
+        <i className="fas fa-image"></i>
         Download
       </button>
     </div>

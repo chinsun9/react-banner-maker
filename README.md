@@ -19,6 +19,7 @@
 - 이미지로 다운로드
 - 클립보드로 카피
 - 컬러 히스토리 기능
+- 컬러 히스토리 임포트, 익스포트 기능
 
 <hr><hr><hr>
 
@@ -107,7 +108,15 @@ const canvas = (canvasRef as any).current;
 - 또 zIndex의 값은 number로 줘야한다.
 
 ### 리액트 타입스크립트에서 프리티어 적용하기
-
-- 으악
+```json settings.json
+  "[typescript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+```
+- 저장할때 자동으로 포맷팅할려면 formatOnSave, defaultFormatter를 지정해줘야한다.
 
 ### 컬러픽커 알파값 못바꾸는 문제

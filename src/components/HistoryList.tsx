@@ -1,6 +1,7 @@
 import React from 'react';
 import useHistory from '../hooks/useHistory';
 import HistoryItem from './HistoryItem';
+import HistoryButtons from './HistoryButtons';
 
 import './HistoryList.css';
 
@@ -17,6 +18,7 @@ function HistoryList() {
           <HistoryItem history={history} key={history.id} />
         ))}
       </div>
+      <HistoryButtons></HistoryButtons>
     </>
   );
 }

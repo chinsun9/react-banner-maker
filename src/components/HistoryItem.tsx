@@ -31,8 +31,8 @@ function HistoryItem({ history }: HistoryItemProps) {
   });
 
   return (
-    <div className={`col-1 HistoryItem`} style={styles.BackgroundColor}>
-      <span className="remove" onClick={onApply}>
+    <div className={`col-1 HistoryItem`} style={styles.BackgroundColor} onClick={onApply}>
+      <span className="remove">
         <strong>A</strong>
       </span>
     </div>
