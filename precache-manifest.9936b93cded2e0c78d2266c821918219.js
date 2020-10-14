@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "30c710de36f7b19912eab9aeafbe4fb0",
+    "revision": "433565b06cb455dd0b57b8cc32fda03b",
     "url": "/react-banner-maker/index.html"
   },
   {
-    "revision": "6b651110e9372a7421f6",
+    "revision": "b92fce09fc963a141300",
     "url": "/react-banner-maker/static/css/main.8e29fd89.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-banner-maker/static/js/2.7029bf11.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6b651110e9372a7421f6",
-    "url": "/react-banner-maker/static/js/main.9d8d9c04.chunk.js"
+    "revision": "b92fce09fc963a141300",
+    "url": "/react-banner-maker/static/js/main.35497d74.chunk.js"
   },
   {
     "revision": "44d8c730d3b251b3a06c",

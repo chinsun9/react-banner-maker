@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/react-banner-maker/precache-manifest.d0cc52e7843a87a88850510393804fcc.js"
+  "/react-banner-maker/precache-manifest.9936b93cded2e0c78d2266c821918219.js"
 );
 
 self.addEventListener('message', (event) => {
