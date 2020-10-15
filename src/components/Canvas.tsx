@@ -47,13 +47,19 @@ function Canvas() {
         });
       } else {
         const mid = (lines.length - 1) / 2;
+        const myMap = new Map<boolean, number>([
+          [false, 100],
+          [true, 50],
+          [true, 50],
+        ]);
         const offsets = lines
           .map((_line, index) => index)
-          .reduce((prev: any[], curr) => {
+          .reduce((prev, curr) => {
             const subtract = curr - mid;
             prev.push([subtract < 0, parseInt(subtract.toString(), 10)]);
             return prev;
-          }, []);
+          }, new Array<[boolean, number]>());
+
         offsets.forEach(([sign, offset], index) => {
           const position = offset * fontHeight;
           const e = sign ? (fontHeight / 2) * -1 : fontHeight / 2;
