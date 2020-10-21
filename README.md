@@ -72,18 +72,15 @@ export * from './types';
 ### Type 'boolean' is not assignable to type 'never'.ts(2322)
 
 ```ts Canvas.tsx
-const offsets = lines
-  .map((_line, index) => index)
-  .reduce((prev: any[], curr) => {
-    const subtract = curr - mid;
-    prev.push([subtract < 0, parseInt(subtract.toString(), 10)]);
-    return prev;
-  }, []);
+       const offsets = lines
+          .map((_line, index) => index)
+          .reduce((prev, curr) => {
+            const subtract = curr - mid;
+            prev.push([subtract < 0, parseInt(subtract.toString(), 10)]);
+            return prev;
+          }, new Array<[boolean, number]>());
 ```
-
-- https://stackoverflow.com/questions/52423842/what-is-not-assignable-to-parameter-of-type-never-error-in-typescript
-- prev배열타입이 never[] 이여서 값을 담을 수 없는 문제가 있었다.
-- typescript에서 array api 쓰는법을 익혀야겠다.
+- prev.push 하는 타입에 맞게 배열을 선언해 넣어줘야한다.
 
 ### react Object is possibly 'null'. useref
 
